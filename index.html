@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Memory Game</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="container">
+		<header>
+			<h1>Memory Game</h1>
+		</header>
+
+		<section class="score-info">
+			<div class="moves">
+				moves: <span class="move-count">0</span>
+			</div>
+
+			<div class="timer">
+				time: <span class="timer-count">0:00</span>
+			</div>
+
+			<div class="star-container">
+				<!-- formatted to prevent white space between icons -->
+				<i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+			</div>
+
+			<div class="restart">
+				restart
+				<i class="fas fa-redo-alt"></i>
+			</div>
+		</section>
+
+		<ul class="game-board">
+			<div class="row">
+				<li class="card">
+					<i class="fas fa-child"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-heart"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-bug"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-flask"></i>
+				</li>
+			</div>
+
+			<div class="row">
+				<li class="card">
+					<i class="fas fa-meh"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-headphones"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-paw"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-child"></i>
+				</li>
+			</div>
+
+			<div class="row">
+				<li class="card">
+					<i class="fas fa-sun"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-heart"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-paw"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-flask"></i>
+				</li>
+			</div>
+
+			<div class="row">
+				<li class="card">
+					<i class="fas fa-headphones"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-meh"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-bug"></i>
+				</li>
+
+				<li class="card">
+					<i class="fas fa-sun"></i>
+				</li>
+			</div>
+
+		</ul>
+	</div>
+
+	<div class="modal-container">
+		<div class="modal-won">
+			<h2 class="modal-text">
+				Congratulations! You won!
+			</h2>
+			<div class="modal-moves"></div>
+			<div class="modal-time"></div>
+			<div class="modal-stars__cont">
+				Score: <span class="modal-stars"></span>
+			</div>
+
+			<a href="#" class="game-over">
+				Play again <i class="fas fa-redo-alt"></i>
+			</a>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
+</body>
+</html>
