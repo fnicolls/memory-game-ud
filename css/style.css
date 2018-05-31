@@ -26,17 +26,20 @@ body {
 .game-board {
 	margin: 0;
 	padding: 0;
-	width: 640px;
-	min-height: 640px;
+	width: 100%;
+	max-width: 640px;
+	min-width: 320px;
+	max-height: 640px;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: space-around;
 	align-items: center;
 }
 
 .card {
 	height: 140px;
-	width: 140px;
+	flex-basis: 23%;
+	max-width: 140px;
 	font-size: 0;
 	background: #aeb4ef;
 	color: #fff;
@@ -46,6 +49,19 @@ body {
 	justify-content: center;
 	align-items: center;
 	box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.8);
+	margin-bottom: 5px;
+}
+
+@media screen and (max-width: 570px) {
+	.card {
+		height: 100px;
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 450px) {
+	.card {
+		height: 80px;
+	}
 }
 
 .card.open {
@@ -58,6 +74,7 @@ body {
 .card.show {
 	font-size: 42px;
 	transform: rotateY(180deg);
+	pointer-events: none;
 }
 
 .card.matched {
@@ -93,10 +110,21 @@ body {
 }
 
 .score-info {
-	width: 50%;
+	width: 80%;
+	max-width: 600px;
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 450px) {
+	.score-info {
+		flex-wrap: wrap;
+	}
+
+	.score-info div {
+		padding: 0 10px 10px 0;
+	}
 }
 
 .star-container i {
@@ -130,7 +158,13 @@ body {
 }
 
 .modal-text {
-	font-size: 34px;
+	font-size: 22px;
+}
+
+@media screen and (min-width: 620px) {
+	.modal-text {
+		font-size: 32px;
+	}
 }
 
 .modal-time,

@@ -21,7 +21,7 @@ let timeCount;
 
 //shuffle cards
 function shuffle(array) {
-	var currentIndex = array.length, temporaryValue, randomIndex;
+	let currentIndex = array.length, temporaryValue, randomIndex;
 
 	while (currentIndex !== 0) {
 		randomIndex = Math.floor(Math.random() * currentIndex);
@@ -53,6 +53,7 @@ for (card of cards) {
 	});
 }
 
+// adds to move count, adjusts star rating
 function moveCount() {
 	moves++;
 	moveCounter.textContent = moves;
@@ -66,6 +67,7 @@ function moveCount() {
 	}
 }
 
+// adjusts star rating based on move count
 function starCount(num) {
 	let starIcon = '<i class="fas fa-star"></i>';
 
@@ -94,6 +96,7 @@ function startTimer() {
 	dt.setMinutes(ss[0]);
 	dt.setSeconds(ss[1]);
 
+	// creates timer with 0:00 format
 	let newTime = new Date(dt.valueOf() + 1000);
 	let temp = newTime.toTimeString().split(" ");
 	let timeElapsed = temp[0].split(":");
@@ -118,7 +121,7 @@ function addToOpen() {
 		let secondCard = openCards[1];
 		let currentCard = openCards[0];
 
-		//match by icon class
+		// match by icon class
 		if (secondCard.children.item(0).classList[1] === currentCard.children.item(0).classList[1]) {
 			matchCards(secondCard, currentCard);
 		} else {
@@ -176,6 +179,7 @@ function resetBoard() {
 
 	let allCards = board.allCards;
 
+	//removes all classes from cards
 	for (let i = 0; i < allCards.length; i++) {
 		allCards[i].classList.remove('open', 'show', 'match');
 	}
