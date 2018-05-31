@@ -18,4 +18,4 @@ A 3 star rating is rewarded if the user completes the game in 30 moves or less. 
 
 Icons are from FontAwesome https://fontawesome.com/icons
 
-Background artwork created by me, <a href="ferrannicolls.com" target="_blank" rel="noopener">Ferran Nicolls</a>
+Background artwork created by me, <a href="http://ferrannicolls.com/" target="_blank" rel="noopener">Ferran Nicolls</a>
